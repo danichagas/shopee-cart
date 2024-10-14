@@ -1,5 +1,5 @@
-async function addItem(userCart,item) {
-  userCart.push(item)
+async function addItem(cart,item) {
+  cart.push(item)
 }
 
 async function calculateTotal(cart) {
@@ -7,9 +7,15 @@ async function calculateTotal(cart) {
   console.log(result.toFixed(3))
 }
 
-async function deleteItem(userCart, name) {}
+async function deleteItem(cart, name) {
+  const index = cart.findIndex((item) => item.name === name)
 
-async function remove(userCart, index) {}
+  if (index !== -1) {
+    cart.splice(index, 1)
+  }
+}
+
+async function remove(cart, index) {}
 
 export {
   addItem,

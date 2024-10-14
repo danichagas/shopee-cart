@@ -2,8 +2,9 @@ async function addItem(userCart,item) {
   userCart.push(item)
 }
 
-async function calculateTotal(userCart) {
-  return userCart.reduce((total, item) => total + item.subTotal(), 0)
+async function calculateTotal(cart) {
+  const result = cart.reduce((total, item) => total + item.subTotal(), 0)
+  console.log(result.toFixed(3))
 }
 
 async function deleteItem(userCart, name) {}

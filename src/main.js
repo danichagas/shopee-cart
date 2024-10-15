@@ -12,6 +12,8 @@ const item2 = await createItem('Xbox Series S', 3550.5, 1)
 await cartService.addItem(cart, item1)
 await cartService.addItem(cart, item2)
 
+await cartService.removeItem(cart,0)
+
 await cartService.displayCart(cart)
 
 cartService.calculateTotal(cart)

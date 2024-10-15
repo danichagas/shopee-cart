@@ -16,7 +16,13 @@ async function deleteItem(cart, name) {
   }
 }
 
-async function removeItem(cart, index) {}
+async function removeItem(cart, index) {
+  const deleteIndex = index - 1
+
+  if (index >= 0 && index < cart.length) {
+    cart.splice(deleteIndex, 1)
+  }
+}
 
 async function displayCart(cart) {
   console.log('Veja seu carrinho:')

@@ -16,11 +16,20 @@ async function deleteItem(cart, name) {
   }
 }
 
-async function removeItem(cart, index) {
-  const deleteIndex = index - 1
+async function removeItem(cart, item) {
+  const indexFound = cart.findIndex((p) => p.name === item.name)
 
-  if (index >= 0 && index < cart.length) {
-    cart.splice(deleteIndex, 1)
+  if (indexFound == -1) {
+    console.log('Item não encontrado')
+    return
+  }
+
+  if (cart[indexFound].quantity > 1) {
+    cart[indexFound] -= 1
+  }
+
+  if (cart[indexFound].quantity == 1) {
+    cart.splice(indexFound, 1)
   }
 }
 

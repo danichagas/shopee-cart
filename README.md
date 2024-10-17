@@ -1,3 +1,5 @@
+# Shopee Cart 🧡
+
 ## About project
 This project aims to simulate the charm of the Shopee shopping website, containing all the features of a cart.
 
@@ -15,9 +17,6 @@ This project aims to simulate the charm of the Shopee shopping website, containi
 <br>
 
 #### Versão em português
-
-# Shopee Cart 🧡
-### Backend
 
 ## Sobre o projeto
 Este projeto tem como finalidade simular o carinho do site de compras da Shopee, contendo todas as funcionalidades de um carrinho.
